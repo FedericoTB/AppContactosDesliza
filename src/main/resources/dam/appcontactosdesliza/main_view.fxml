@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<StackPane fx:id="main_view" prefHeight="640.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dam.appcontactosdesliza.controllers.MainViewController">
+   <children>
+      <FontIcon fx:id="menudisplayer" iconColor="#7c7c7c" iconLiteral="fas-bars" iconSize="32" onMouseClicked="#onMenuDisplayerClick" StackPane.alignment="TOP_LEFT">
+         <StackPane.margin>
+            <Insets left="20.0" top="20.0" />
+         </StackPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontIcon>
+      <VBox fx:id="menusidebar" alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="140.0" spacing="20.0" style="-fx-background-color: #dddddd;" translateX="-140.0" StackPane.alignment="TOP_LEFT">
+         <children>
+            <Label contentDisplay="TOP" text="Contactos FX">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <Label contentDisplay="TOP" onMouseClicked="#onContactListDisplay" text="Contacts">
+               <graphic>
+                  <FontIcon iconColor="#7c7c7c" iconLiteral="fas-user-friends" iconSize="32" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label contentDisplay="TOP" text="Contact Dummy">
+               <graphic>
+                  <FontIcon iconColor="#7c7c7c" iconLiteral="fas-user" iconSize="32" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label contentDisplay="TOP" text="Contact Dummy2">
+               <graphic>
+                  <FontIcon iconColor="#7c7c7c" iconLiteral="fas-user-circle" iconSize="32" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <Label contentDisplay="TOP" text="Settings">
+               <graphic>
+                  <FontIcon iconColor="#7c7c7c" iconLiteral="fas-cog" iconSize="32" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <Label contentDisplay="TOP" text="Exit">
+               <graphic>
+                  <FontIcon iconColor="#7c7c7c" iconLiteral="fas-power-off" iconSize="32" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </VBox>
+      <fx:include fx:id="contact_list_include" disable="true" source="contact_list.fxml" visible="false" />
+   </children>
+</StackPane>
